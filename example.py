@@ -29,7 +29,7 @@ bot = AutoKimai(user=user,
                 end_date=datetime.datetime.strftime(datetime.datetime.today(),'%d/%m/%Y'),
                 holidays=holidays,
                 test=False,
-                url='http://195.81.204.155/kimai/')
+                url='http://199.86.204.152/kimai/')
 
 if __name__ == "__main__":
     bot.run()
