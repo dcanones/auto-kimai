@@ -1,12 +1,18 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import datetime
+import platform
 import time
 
 class AutoKimai():
 
     login_url = 'index.php?a=logout'
-    driver = webdriver.Chrome(executable_path='drivers/chromedriver')
+    if platform.system() == 'Linux':
+        driver = webdriver.Chrome(executable_path='drivers/chromedriver')
+    elif platform.system() == 'Windows':
+        driver = webdriver.Chrome(executable_path='drivers/chromedriver.exe')
+    else:
+        raise OSError('Can not detect a valid operating system')
     driver.implicitly_wait(10)
 
     def __init__(self,

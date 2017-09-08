@@ -1,5 +1,4 @@
 from autokimai import AutoKimai
-import datetime
 
 url = 'your_kimai_base_url'
 user = 'your_user'
@@ -24,10 +23,10 @@ bot = AutoKimai(user=user,
                 project=project,
                 task=task,
                 start_date='25/08/2017',
-                end_date='26/08/2017',
+                end_date='08/09/2017',
                 holidays=holidays,
                 test=False,
-                url='http://199.99.999.199/kimai/')
+                url=url)
 
 if __name__ == "__main__":
     bot.run()
